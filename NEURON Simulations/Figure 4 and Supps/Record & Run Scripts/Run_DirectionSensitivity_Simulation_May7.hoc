@@ -1,0 +1,146 @@
+// This script runs the direction sensitivity simulation for 6 cables (with different Ra values)
+// and generates one text file for each of four g_pas values
+// load_file("nrngui.hoc")
+// set correct working directory:
+//chdir("/Users/adrianeotopalik/Desktop/NEURON-7.5/Direction Sensitivity Simulations/Newest Run/Direction Sensitivity/Mar 21 Cable Library")
+
+/////////////////////////  gpas = 0.00006 ohm*cm^2  //////////////////////////////////
+
+chdir("/Users/adrianeotopalik/Desktop/NEURON-7.5/Direction Sensitivity Simulations/Newest Run/Direction Sensitivity/Mar 21 Cable Library")
+load_file("tapered_cable_gpas00006_diams20_10.hoc")
+load_file("Record_DirectionSensitivity_May7.hoc")
+go()
+
+// have to give go() command then can run the write-to-file sequence below
+
+objref f1
+f1 = new File()
+f1.wopen("DSOutput_gpas00006_diams20_10.txt")
+cv1.printf(f1)
+cv2.printf(f1)
+cv3.printf(f1)
+cv4.printf(f1)
+cv5.printf(f1)
+cv6.printf(f1)
+f1.close()
+
+quit()
+
+/////////////////////////  gpas = 0.00005 ohm*cm^2  //////////////////////////////////
+
+chdir("/Users/adrianeotopalik/Desktop/NEURON-7.5/Direction Sensitivity Simulations/Newest Run/Direction Sensitivity/Mar 21 Cable Library")
+load_file("tapered_cable_gpas00005_diams20_10.hoc")
+load_file("Record_DirectionSensitivity_May7.hoc")
+go()
+
+// have to give go() command then can run the write-to-file sequence below
+
+objref f1
+f1 = new File()
+f1.wopen("DSOutput_gpas00005_diams20_10.txt")
+cv1.printf(f1)
+cv2.printf(f1)
+cv3.printf(f1)
+cv4.printf(f1)
+cv5.printf(f1)
+cv6.printf(f1)
+f1.close()
+
+quit()
+
+/////////////////////////  gpas = 0.0001 ohm*cm^2  //////////////////////////////////
+
+chdir("/Users/adrianeotopalik/Desktop/NEURON-7.5/Direction Sensitivity Simulations/Newest Run/Direction Sensitivity/Mar 21 Cable Library")
+load_file("tapered_cable_gpas0001_diams20_10.hoc")
+load_file("Record_DirectionSensitivity_May7.hoc")
+go()
+
+// have to give go() command then can run the write-to-file sequence below
+
+objref f1
+f1 = new File()
+f1.wopen("DSOutput_gpas0001_diams20_10.txt")
+cv1.printf(f1)
+cv2.printf(f1)
+cv3.printf(f1)
+cv4.printf(f1)
+cv5.printf(f1)
+cv6.printf(f1)
+f1.close()
+
+quit()
+
+/////////////////////////  gpas = 0.0002 ohm*cm^2  //////////////////////////////////
+
+chdir("/Users/adrianeotopalik/Desktop/NEURON-7.5/Direction Sensitivity Simulations/Newest Run/Direction Sensitivity/Mar 21 Cable Library")
+load_file("tapered_cable_gpas0002_diams20_10.hoc")
+load_file("Record_DirectionSensitivity_May7.hoc")
+go()
+
+// have to give go() command then can run the write-to-file sequence below
+
+objref f2
+f2 = new File()
+f2.wopen("DSOutput_gpas0002_diams20_10.txt")
+cv1.printf(f2)
+cv2.printf(f2)
+cv3.printf(f2)
+cv4.printf(f2)
+cv5.printfRecord_v2_DirectionSensitivity(f2)
+cv6.printf(f2)
+f2.close()
+
+quit()
+
+/////////////////////////  gpas = 0.001 ohm*cm^2  //////////////////////////////////
+
+chdir("/Users/adrianeotopalik/Desktop/NEURON-7.5/Direction Sensitivity Simulations/Newest Run/Direction Sensitivity/Mar 21 Cable Library")
+load_file("tapered_cable_gpas001_diams20_10.hoc")
+load_file("Record_DirectionSensitivity_May7.hoc")
+
+go()
+
+// have to give go() command then can run the write-to-file sequence below
+
+objref f3
+f3 = new File()
+f3.wopen("DSOutput_gpas001_diams20_10.txt")
+cv1.printf(f3)
+cv2.printf(f3)
+cv3.printf(f3)
+cv4.printf(f3)
+cv5.printf(f3)
+cv6.printf(f3)
+f3.close()
+
+quit()
+
+
+
+/////////////////////////  gpas = 0.01 ohm*cm^2  //////////////////////////////////
+
+chdir("/Users/adrianeotopalik/Desktop/NEURON-7.5/Direction Sensitivity Simulations/Newest Run/Direction Sensitivity/Mar 21 Cable Library")
+load_file("tapered_cable_gpas01_diams20_10.hoc")
+load_file("Record_DirectionSensitivity_May7.hoc")
+
+go()
+
+// have to give go() command then can run the write-to-file sequence below
+
+objref f4
+f4 = new File()
+f4.wopen("DSOutput_gpas01_diams20_10.txt")
+cv1.printf(f4)
+cv2.printf(f4)
+cv3.printf(f4)
+cv4.printf(f4)
+cv5.printf(f4)
+cv6.printf(f4)
+f4.close()
+
+quit()
+
+
+
+
+

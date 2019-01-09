@@ -1,0 +1,140 @@
+// TAPERED CABLE TEMPLATE
+// different cables were tested for Otopalik et al. 2017
+// We sampled a matrix of Ra and g_pas values:
+// Ra: 0.1, 0.5, 1, 10, 50 ohm*cm 
+// g_pas: 0.0001, 0.001, 0.002, 0.01 ohm*cm^2
+// the output (voltage traces) can be found in the folder "Simulated Traces"
+// Please attend to the README text file (CableModel_README), which
+// establishes the key for the 20 different combinations of Ra and g_pas
+
+
+create cable1
+access cable1
+
+// GEOMETRY //
+L = 1000 // um; keep constant
+nseg = 50 //101 nodes total including mid-points
+diam(0:1) = 20:0.5// um; 25 possible tapers with ranges between 0.5, 1, 5, 10, 20 um
+
+
+// BIOPHYSICS //
+Ra = 10 // vary between 1, 10, 50, 100, 150, 200 ohm*cm
+cm = 1 // uF/cm^2; keep constant
+insert pas
+g_pas = 0.0001 // ohm*cm^2; vary between 0.0001, 0.0005, 0.001, 0.002, 0.01
+e_pas = -50 // mV
+
+// topology()  // prints topology in command window
+// forall psection() //prints biophysical properties of cable in command window
+
+
+////////////////////////////////////////////////////////////
+
+create cable2
+access cable2
+
+// GEOMETRY //
+L = 1000 // um; keep constant
+nseg = 50 //101 nodes total including mid-points
+diam(0:1) = 20:0.5// um; 25 possible tapers with ranges between 0.5, 1, 5, 10, 20 um
+
+
+// BIOPHYSICS //
+Ra = 50 // vary between 1, 10, 50, 100, 150, 200 ohm*cm
+cm = 1 // uF/cm^2; keep constant
+insert pas
+g_pas = 0.0001 // ohm*cm^2; vary between 0.0001, 0.0005, 0.001, 0.002, 0.01
+e_pas = -50 // mV
+
+
+// topology()  // prints topology in command window
+// forall psection() //prints biophysical properties of cable in command window
+
+////////////////////////////////////////////////////////////
+
+
+create cable3
+access cable3
+
+// GEOMETRY //
+L = 1000 // um; keep constant
+nseg = 50 //101 nodes total including mid-points
+diam(0:1) = 20:0.5// um; 25 possible tapers with ranges between 0.5, 1, 5, 10, 20 um
+
+
+// BIOPHYSICS //
+Ra = 100 // vary between 1, 10, 50, 100, 150, 200 ohm*cm
+cm = 1 // uF/cm^2; keep constant
+insert pas
+g_pas = 0.0001 // ohm*cm^2; vary between 0.0001, 0.0005, 0.001, 0.002, 0.01
+e_pas = -50 // mV
+
+
+// topology()  // prints topology in command window
+// forall psection() //prints biophysical properties of cable in command window
+
+////////////////////////////////////////////////////////////
+
+create cable4
+access cable4
+
+// GEOMETRY //
+L = 1000 // um; keep constant
+nseg = 50 //101 nodes total including mid-points
+diam(0:1) = 20:0.5// um; 25 possible tapers with ranges between 0.5, 1, 5, 10, 20 um
+
+
+// BIOPHYSICS //
+Ra = 150 // vary between 1, 10, 50, 100, 150, 200 ohm*cm
+cm = 1 // uF/cm^2; keep constant
+insert pas
+g_pas = 0.0001 // ohm*cm^2; vary between 0.0001, 0.0005, 0.001, 0.002, 0.01
+e_pas = -50 // mV
+
+
+// topology()  // prints topology in command window
+// forall psection() //prints biophysical properties of cable in command window
+
+////////////////////////////////////////////////////////////
+
+create cable5
+access cable5
+
+// GEOMETRY //
+L = 1000 // um; keep constant
+nseg = 50 //101 nodes total including mid-points
+diam(0:1) = 20:0.5// um; 25 possible tapers with ranges between 0.5, 1, 5, 10, 20 um
+
+
+// BIOPHYSICS //
+Ra = 200 // vary between 1, 10, 50, 100, 150, 200 ohm*cm
+cm = 1 // uF/cm^2; keep constant
+insert pas
+g_pas = 0.0001 // ohm*cm^2; vary between 0.0001, 0.0005, 0.001, 0.002, 0.01
+
+e_pas = -50 // mV
+
+// topology()  // prints topology in command window
+// forall psection() //prints biophysical properties of cable in command window
+
+////////////////////////////////////////////////////////////
+
+create cable6
+access cable6
+
+// GEOMETRY //
+L = 1000 // um; keep constant
+nseg = 50 //101 nodes total including mid-points
+diam(0:1) = 20:0.5// um; 25 possible tapers with ranges between 0.5, 1, 5, 10, 20 um
+
+
+// BIOPHYSICS //
+Ra = 300 // vary between 1, 10, 50, 100, 150, 200 ohm*cm
+cm = 1 // uF/cm^2; keep constant
+insert pas
+g_pas = 0.0001 // ohm*cm^2; vary between 0.0001, 0.0005, 0.001, 0.002, 0.01
+
+e_pas = -50 // mV
+
+topology()  // prints topology in command window
+forall psection() //prints biophysical properties of cables in command window

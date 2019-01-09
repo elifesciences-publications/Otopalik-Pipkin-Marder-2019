@@ -1,0 +1,185 @@
+// This script runs the direction sensitivity simulation for 6 cables (with different Ra values)
+// and generates one text file for each of four g_pas values
+// load_file("nrngui.hoc")
+// set correct working directory:
+//chdir("/Users/adrianeotopalik/Desktop/NEURON-7.5/Direction Sensitivity Simulations/Newest Run")
+
+/////////////////////////  gpas = 0.0002 ohm*cm^2  //////////////////////////////////
+
+chdir("/Users/adrianeotopalik/Desktop/NEURON-7.5/Direction Sensitivity Simulations/Newest Run/Measure Lambda/Mar 21 Cable Library")
+load_file("cable_v2_gpas0002_diams20_05.hoc")
+load_file("Measure_Lambda_May6.hoc")
+go()
+
+// have to give go() command then can run the write-to-file sequence below
+
+objref f1
+f1 = new File()
+f1.wopen("lambda_gpas0002_diams20_05_e0.txt")
+cv1.printf(f1)
+cv1_150.printf(f1)
+cv1_300.printf(f1)
+cv1_450.printf(f1)
+cv1_600.printf(f1)
+cv1_750.printf(f1)
+cv1_850.printf(f1)
+
+
+
+cv2.printf(f1)
+cv2_150.printf(f1)
+cv2_150.printf(f1)
+cv2_150.printf(f1)
+cv2_150.printf(f1)
+
+cv3.printf(f1)
+cv3_150.printf(f1)
+cv4.printf(f1)
+cv4_150.printf(f1)
+cv5.printf(f1)
+cv5_150.printf(f1)
+cv6.printf(f1)
+cv6_150.printf(f1)
+f1.close()
+
+quit()
+
+/////////////////////////  gpas = 0.00005 ohm*cm^2  //////////////////////////////////
+
+chdir("/Users/adrianeotopalik/Desktop/NEURON-7.5/Direction Sensitivity Simulations/Newest Run")
+load_file("cable_v2_gpas00005_diams20_05.hoc")
+load_file("Measure_Lambda_v3_e0.hoc")
+go()
+
+// have to give go() command then can run the write-to-file sequence below
+
+objref f1
+f1 = new File()
+f1.wopen("output_v2_gpas00005_diams20_05_e0.txt")
+cv1.printf(f1)
+cv2.printf(f1)
+cv3.printf(f1)
+cv4.printf(f1)
+cv5.printf(f1)
+cv6.printf(f1)
+f1.close()
+
+quit()
+
+/////////////////////////  gpas = 0.0001 ohm*cm^2  //////////////////////////////////
+
+chdir("/Users/adrianeotopalik/Desktop/NEURON-7.5/Direction Sensitivity Simulations/Newest Run")
+load_file("cable_v2_gpas0001_diams20_05.hoc")
+load_file("Measure_Lambda_v3_e0.hoc")
+go()
+
+// have to give go() command then can run the write-to-file sequence below
+
+objref f1
+f1 = new File()
+f1.wopen("output_v2_gpas0001_diams20_05_e0.txt")
+cv1.printf(f1)
+cv2.printf(f1)
+cv3.printf(f1)
+cv4.printf(f1)
+cv5.printf(f1)
+cv6.printf(f1)
+f1.close()
+
+quit()
+
+/////////////////////////  gpas = 0.0005 ohm*cm^2  //////////////////////////////////
+
+chdir("/Users/adrianeotopalik/Desktop/NEURON-7.5/Direction Sensitivity Simulations/Newest Run")
+load_file("cable_v2_gpas0005_diams20_05.hoc")
+load_file("Measure_Lambda_v3_e0.hoc")
+go()
+
+// have to give go() command then can run the write-to-file sequence below
+
+objref f2
+f2 = new File()
+f2.wopen("output_v2_gpas0005_diams20_05_e0.txt")
+cv1.printf(f2)
+cv2.printf(f2)
+cv3.printf(f2)
+cv4.printf(f2)
+cv5.printf(f2)
+cv6.printf(f2)
+f2.close()
+
+quit()
+
+/////////////////////////  gpas = 0.001 ohm*cm^2  //////////////////////////////////
+
+chdir("/Users/adrianeotopalik/Desktop/NEURON-7.5/Direction Sensitivity Simulations/Newest Run")
+load_file("cable_v2_gpas001_diams20_05.hoc")
+load_file("Measure_Lambda_v3_e0.hoc")
+
+go()
+
+// have to give go() command then can run the write-to-file sequence below
+
+objref f3
+f3 = new File()
+f3.wopen("output_v2_gpas001_diams20_05_e0.txt")
+cv1.printf(f3)
+cv2.printf(f3)
+cv3.printf(f3)
+cv4.printf(f3)
+cv5.printf(f3)
+cv6.printf(f3)
+f3.close()
+
+quit()
+
+/////////////////////////  gpas = 0.005 ohm*cm^2  //////////////////////////////////
+
+chdir("/Users/adrianeotopalik/Desktop/NEURON-7.5/Direction Sensitivity Simulations/Newest Run")
+load_file("cable_v2_gpas005_diams20_05.hoc")
+load_file("Measure_Lambda_v3_e0.hoc")
+
+go()
+
+// have to give go() command then can run the write-to-file sequence below
+
+objref f3
+f3 = new File()
+f3.wopen("output_v2_gpas005_diams20_05_e0.txt")
+cv1.printf(f3)
+cv2.printf(f3)
+cv3.printf(f3)
+cv4.printf(f3)
+cv5.printf(f3)
+cv6.printf(f3)
+f3.close()
+
+quit()
+
+/////////////////////////  gpas = 0.01 ohm*cm^2  //////////////////////////////////
+
+chdir("/Users/adrianeotopalik/Desktop/NEURON-7.5/Direction Sensitivity Simulations/Newest Run")
+load_file("cable_v2_gpas01_diams20_05.hoc")
+load_file("Measure_Lambda_v3_e0.hoc")
+
+go()
+
+// have to give go() command then can run the write-to-file sequence below
+
+objref f4
+f4 = new File()
+f4.wopen("output_v2_gpas01_diams20_05_e0.txt")
+cv1.printf(f4)
+cv2.printf(f4)
+cv3.printf(f4)
+cv4.printf(f4)
+cv5.printf(f4)
+cv6.printf(f4)
+f4.close()
+
+quit()
+
+
+
+
+

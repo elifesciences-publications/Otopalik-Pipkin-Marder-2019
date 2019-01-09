@@ -1,0 +1,193 @@
+// SHUNTED TAPERED CABLE TEMPLATE
+// different cables were tested for Otopalik et al. 2017
+// We sampled a matrix of Ra and g_pas values:
+// Ra: 0.1, 0.5, 1, 10, 50 ohm*cm 
+// g_pas: 0.0001, 0.001, 0.002, 0.01 ohm*cm^2
+// the output (voltage traces) can be found in the folder "Simulated Traces"
+// Please attend to the README text file (CableModel_README), which
+// establishes the key for the 20 different combinations of Ra and g_pas
+
+
+//MAIN CABLE
+create cable1
+access cable1
+// GEOMETRY //
+L = 1000 // um; keep constant
+nseg = 50 //101 nodes total including mid-points
+diam(0:1) = 1:0.5// um; 25 possible tapers with ranges between 0.5, 1, 5, 10, 20 um
+// BIOPHYSICS //
+Ra = 50 // vary between 1, 10, 50, 100, 150, 200 ohm*cm
+cm = 1 // uF/cm^2; keep constant
+insert pas
+g_pas = 0.0001 // ohm*cm^2; vary between 0.0001, 0.0005, 0.001, 0.002, 0.01
+e_pas = -60 // mV
+
+//SHUNT
+create shunt1
+access shunt1
+// GEOMETRY //
+shunt1.L = 300 // um; This would vary depending on where the neurite meets the primary neurite
+shunt1.nseg = 50 //101 nodes total including mid-points
+shunt1.diam = 10// um; an approximation of the primary neurite.
+// BIOPHYSICS //
+shunt1.Ra = 50 // make consistent with cable
+shunt1.cm = 1 // consistent with cable
+insert pas
+shunt1.g_pas = 0.0001 // make consistent with cable 
+shunt1.e_pas = -60 // mV; consistent with cable
+
+connect shunt1(0), cable1(0.3)
+
+// topology()  // prints topology in command window
+// forall psection() //prints biophysical properties of cable in command window
+
+
+////////////////////////////////////////////////////////////
+
+//MAIN CABLE
+create cable2
+access cable2
+// GEOMETRY //
+L = 1000 // um; keep constant
+nseg = 50 //101 nodes total including mid-points
+diam(0:1) = 1:0.5// um; 25 possible tapers with ranges between 0.5, 1, 5, 10, 20 um
+// BIOPHYSICS //
+Ra = 100 // vary between 1, 10, 50, 100, 150, 200 ohm*cm
+cm = 1 // uF/cm^2; keep constant
+insert pas
+g_pas = 0.0001 // ohm*cm^2; vary between 0.0001, 0.0005, 0.001, 0.002, 0.01
+e_pas = -60 // mV
+
+//SHUNT
+create shunt2
+access shunt2
+// GEOMETRY //
+shunt2.L = 300 // um; This would vary depending on where the neurite meets the primary neurite
+shunt2.nseg = 50 //101 nodes total including mid-points
+shunt2.diam = 10// um; an approximation of the primary neurite.
+// BIOPHYSICS //
+shunt2.Ra = 100 // make consistent with cable
+shunt2.cm = 1 // consistent with cable
+insert pas
+shunt2.g_pas = 0.0001 // make consistent with cable 
+shunt2.e_pas = -60 // mV; consistent with cable
+
+
+connect shunt2(0), cable2(0.3)
+
+// topology()  // prints topology in command window
+// forall psection() //prints biophysical properties of cable in command window
+
+
+////////////////////////////////////////////////////////////
+
+//MAIN CABLE
+create cable3
+access cable3
+// GEOMETRY //
+L = 1000 // um; keep constant
+nseg = 50 //101 nodes total including mid-points
+diam(0:1) = 1:0.5// um; 25 possible tapers with ranges between 0.5, 1, 5, 10, 20 um
+// BIOPHYSICS //
+Ra = 150 // vary between 1, 10, 50, 100, 150, 200 ohm*cm
+cm = 1 // uF/cm^2; keep constant
+insert pas
+g_pas = 0.0001 // ohm*cm^2; vary between 0.0001, 0.0005, 0.001, 0.002, 0.01
+e_pas = -60 // mV
+
+//SHUNT
+create shunt3
+access shunt3
+// GEOMETRY //
+shunt3.L = 300 // um; This would vary depending on where the neurite meets the primary neurite
+shunt3.nseg = 50 //101 nodes total including mid-points
+shunt3.diam = 10// um; an approximation of the primary neurite.
+// BIOPHYSICS //
+shunt3.Ra = 150 // make consistent with cable
+shunt3.cm = 1 // consistent with cable
+insert pas
+shunt3.g_pas = 0.0001 // make consistent with cable 
+shunt3.e_pas = -60 // mV; consistent with cable
+
+
+connect shunt3(0), cable3(0.3)
+
+// topology()  // prints topology in command window
+// forall psection() //prints biophysical properties of cable in command window
+
+
+////////////////////////////////////////////////////////////
+
+//MAIN CABLE
+create cable4
+access cable4
+// GEOMETRY //
+L = 1000 // um; keep constant
+nseg = 50 //101 nodes total including mid-points
+diam(0:1) = 1:0.5// um; 25 possible tapers with ranges between 0.5, 1, 5, 10, 20 um
+// BIOPHYSICS //
+Ra = 200 // vary between 1, 10, 50, 100, 150, 200 ohm*cm
+cm = 1 // uF/cm^2; keep constant
+insert pas
+g_pas = 0.0001 // ohm*cm^2; vary between 0.0001, 0.0005, 0.001, 0.002, 0.01
+e_pas = -60 // mV
+
+//SHUNT
+create shunt4
+access shunt4
+// GEOMETRY //
+shunt4.L = 300 // um; This would vary depending on where the neurite meets the primary neurite
+shunt4.nseg = 50 //101 nodes total including mid-points
+shunt4.diam = 10// um; an approximation of the primary neurite.
+// BIOPHYSICS //
+shunt4.Ra = 200 // make consistent with cable
+shunt4.cm = 1 // consistent with cable
+insert pas
+shunt4.g_pas = 0.0001 // make consistent with cable 
+shunt4.e_pas = -60 // mV; consistent with cable
+
+
+connect shunt4(0), cable4(0.3)
+
+// topology()  // prints topology in command window
+// forall psection() //prints biophysical properties of cable in command window
+
+
+////////////////////////////////////////////////////////////
+
+//MAIN CABLE
+create cable5
+access cable5
+// GEOMETRY //
+L = 1000 // um; keep constant
+nseg = 50 //101 nodes total including mid-points
+diam(0:1) = 1:0.5// um; 25 possible tapers with ranges between 0.5, 1, 5, 10, 20 um
+// BIOPHYSICS //
+Ra = 300 // vary between 1, 10, 50, 100, 150, 200 ohm*cm
+cm = 1 // uF/cm^2; keep constant
+insert pas
+g_pas = 0.0001 // ohm*cm^2; vary between 0.0001, 0.0005, 0.001, 0.002, 0.01
+e_pas = -60 // mV
+
+//SHUNT
+create shunt5
+access shunt5
+// GEOMETRY //
+shunt5.L = 300 // um; This would vary depending on where the neurite meets the primary neurite
+shunt5.nseg = 50 //101 nodes total including mid-points
+shunt5.diam = 10// um; an approximation of the primary neurite.
+// BIOPHYSICS //
+shunt5.Ra = 300 // make consistent with cable
+shunt5.cm = 1 // consistent with cable
+insert pas
+shunt5.g_pas = 0.0001 // make consistent with cable 
+shunt5.e_pas = -60 // mV; consistent with cable
+
+
+connect shunt5(0), cable5(0.3)
+
+// topology()  // prints topology in command window
+// forall psection() //prints biophysical properties of cable in command window
+
+
+////////////////////////////////////////////////////////////

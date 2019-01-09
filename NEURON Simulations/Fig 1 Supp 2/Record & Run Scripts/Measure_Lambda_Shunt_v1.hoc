@@ -1,0 +1,288 @@
+//Measure_Lambda_Shunt_v1
+
+//evoked glutamate responses is mimicked with an inhibitory current with Erev (e) = -70 mV 
+//at cable.loc(0.9), which is at 900 microns on cable. Responses are recorded with 8 electrodes
+//spaced 100 microns apart, spanning length of cable and spaced every 100 microns as 100:100:900 
+//microns.
+
+// CABLE 1
+// Ra = 10 ohm*cm
+// Define position of evoked glutamate responses:
+
+objref pos1
+cable1 pos1 = new AlphaSynapse(0.9) // mimick evoked glutamate responses with alpha syn.
+pos1.onset = 1000 // stimulation time for each site (at 5 Hz, so ISI = 200 ms)
+pos1.gmax = 0.01 // maximal conductances (set equal at first in uS)
+pos1.tau = 70 // time constant, set to 3 ms at first
+pos1.e = -75 // Erev for each position, set all to -70 mV
+
+// Define position of shunt source:
+
+objref pos12
+cable1 pos12 = new AlphaSynapse(0.3) // mimick a local shunt with alpha syn ~ leak current.
+pos12.onset = 20 // 
+pos12.gmax = 0.5 // maximal conductances (set equal at first in uS)
+pos12.tau = 10000 // time constant, set to 3 ms at first
+pos12.e = -60 // Erev for a local leak current "shunt"
+
+
+// CABLE 2
+// Ra = 50 ohm*cm
+// Individual responses evoked at cable.loc(0.9) ~ 900 microns away from recording electrode
+// define positions and evoked responses:
+objref pos2
+cable2  pos2 = new AlphaSynapse(0.9) // mimick evoked glutamate responses with alpha syn.
+pos2.onset = 1000 // stimulation time for each site (at 5 Hz, so ISI = 200 ms)
+pos2.gmax = 0.01 // maximal conductances (set equal at first in uS)
+pos2.tau = 70 // time constant, set to 3 ms at first
+pos2.e = -75 // Erev for each position, set all to -70 mV
+
+// Define position of shunt source:
+
+objref pos22
+cable1 pos22 = new AlphaSynapse(0.3) // mimick a local shunt with alpha syn ~ leak current.
+pos22.onset = 20 // 
+pos22.gmax = 0.5 // maximal conductances (set equal at first in uS)
+pos22.tau = 10000 // time constant, set to 3 ms at first
+pos22.e = - 60 // Erev for a local leak current "shunt"
+
+
+// CABLE 3
+// Ra = 100 ohm*cm
+// Individual responses evoked at cable.loc(0.9) ~ 900 microns away from recording electrode
+// define positions and evoked responses:
+objref pos3
+cable3  pos3 = new AlphaSynapse(0.9) // mimick evoked glutamate responses with alpha syn.
+pos3.onset = 1000 // stimulation time for each site (at 5 Hz, so ISI = 200 ms)
+pos3.gmax = 0.01 // maximal conductances (set equal at first in uS)
+pos3.tau = 70 // time constant, set to 3 ms at first
+pos3.e = -75 // Erev for each position, set all to -70 mV
+
+// Define position of shunt source:
+
+objref pos32
+cable1 pos32 = new AlphaSynapse(0.3) // mimick a local shunt with alpha syn ~ leak current.
+pos32.onset = 20 // 
+pos32.gmax = 0.5 // maximal conductances (set equal at first in uS)
+pos32.tau = 10000 // time constant, set to 3 ms at first
+pos32.e = - 60 // Erev for a local leak current "shunt"
+
+
+// CABLE 4
+// Ra = 150 ohm*cm
+// Individual responses evoked at cable.loc(0.9) ~ 900 microns away from recording electrode
+// define positions and evoked responses:
+objref pos4
+cable4  pos4 = new AlphaSynapse(0.9) // mimick evoked glutamate responses with alpha syn.
+pos4.onset = 1000 // stimulation time for each site (at 5 Hz, so ISI = 200 ms)
+pos4.gmax = 0.01 // maximal conductances (set equal at first in uS)
+pos4.tau = 70 // time constant, set to 3 ms at first
+pos4.e = -75 // Erev for each position, set all to -70 mV
+
+// Define position of shunt source:
+
+objref pos42
+cable1 pos42 = new AlphaSynapse(0.3) // mimick a local shunt with alpha syn ~ leak current.
+pos42.onset = 20 // 
+pos42.gmax = 0.5 // maximal conductances (set equal at first in uS)
+pos42.tau = 10000 // time constant, set to 3 ms at first
+pos42.e = - 60 // Erev for a local leak current "shunt"
+
+
+
+// CABLE 5
+// Ra = 200 ohm*cm
+// Individual responses evoked at cable.loc(0.9) ~ 900 microns away from recording electrode
+// define positions and evoked responses:
+objref pos5
+cable5  pos5 = new AlphaSynapse(0.9) // mimick evoked glutamate responses with alpha syn.
+pos5.onset = 1000 // stimulation time for each site (at 5 Hz, so ISI = 200 ms)
+pos5.gmax = 0.01 // maximal conductances (set equal at first in uS)
+pos5.tau = 70 // time constant, set to 3 ms at first
+pos5.e = -75 // Erev for each position, set all to -70 mV
+
+
+// Define position of shunt source:
+
+objref pos52
+cable1 pos52 = new AlphaSynapse(0.3) // mimick a local shunt with alpha syn ~ leak current.
+pos52.onset = 20 // 
+pos52.gmax = 0.5 // maximal conductances (set equal at first in uS)
+pos52.tau = 10000 // time constant, set to 3 ms at first
+pos52.e = - 60 // Erev for a local leak current "shunt"
+
+
+// CABLE 6
+// Ra = 300 ohm*cm
+// Individual responses evoked at cable.loc(0.9) ~ 900 microns away from recording electrode
+// define positions and evoked responses:
+objref pos6
+cable6  pos6 = new AlphaSynapse(0.9) // mimick evoked glutamate responses with alpha syn.
+pos6.onset = 1000 // stimulation time for each site (at 5 Hz, so ISI = 200 ms)
+pos6.gmax = 0.01 // maximal conductances (set equal at first in uS)
+pos6.tau = 70 // time constant, set to 3 ms at first
+pos6.e = -75 // Erev for each position, set all to -70 mV
+
+// Define position of shunt source:
+
+objref pos62
+cable1 pos62 = new AlphaSynapse(0.3) // mimick a local shunt with alpha syn ~ leak current.
+pos62.onset = 20 // 
+pos62.gmax = 0.5 // maximal conductances (set equal at first in uS)
+pos62.tau = 10000 // time constant, set to 3 ms at first
+pos62.e = - 60 // Erev for a local leak current "shunt"
+
+
+//////////////////////////////////////////////////////
+
+// VECTORS //
+
+// 0 microns from stimulation site
+objref cv1_0, cv2_0, cv3_0, cv4_0, cv5_0, cv6_0
+cv1_0 = new Vector()
+cable1 cv1_0.record(&v(0.9)) // record v at stimulation site 
+cv2_0 = new Vector()
+cable2 cv2_0.record(&v(0.9)) // record v at stimulation site 
+cv3_0 = new Vector()
+cable3 cv3_0.record(&v(0.9)) // record v at stimulation site
+cv4_0 = new Vector()
+cable4 cv4_0.record(&v(0.9)) // record v at stimulation site
+cv5_0 = new Vector()
+cable5 cv5_0.record(&v(0.9)) // record v at stimulation site
+cv6_0 = new Vector()
+cable6 cv6_0.record(&v(0.9)) // rrecord v at stimulation site
+
+// 150 microns from stimulation site
+objref cv1_150, cv2_150, cv3_150, cv4_150, cv5_150, cv6_150
+cv1_150 = new Vector()
+cable1 cv1_150.record(&v(0.75)) // record v 150 microns from stimulation site 
+cv2_150 = new Vector()
+cable2 cv2_150.record(&v(0.75)) // record v 150 microns from stimulation site
+cv3_150 = new Vector()
+cable3 cv3_150.record(&v(0.75)) // record v 150 microns from stimulation site
+cv4_150 = new Vector()
+cable4 cv4_150.record(&v(0.75)) // record v 150 microns from stimulation site
+cv5_150 = new Vector()
+cable5 cv5_150.record(&v(0.75)) // record v 150 microns from stimulation site
+cv6_150 = new Vector()
+cable6 cv6_150.record(&v(0.75)) // rrecord v 150 microns from stimulation site
+
+// 300 microns from stimulation site
+objref cv1_300, cv2_300, cv3_300, cv4_300, cv5_300, cv6_300
+cv1_300 = new Vector()
+cable1 cv1_300.record(&v(0.6)) // record v 300 microns from stimulation site
+cv2_300 = new Vector()
+cable2 cv2_300.record(&v(0.6)) // record v 300 microns from stimulation site
+cv3_300 = new Vector()
+cable3 cv3_300.record(&v(0.6)) // record v 300 microns from stimulation site
+cv4_300 = new Vector()
+cable4 cv4_300.record(&v(0.6)) // record v 300 microns from stimulation site
+cv5_300 = new Vector()
+cable5 cv5_300.record(&v(0.6)) // record v 300 microns from stimulation site
+cv6_300 = new Vector()
+cable6 cv6_300.record(&v(0.6)) // record v 300 microns from stimulation site
+
+// 450 microns from stimulation site
+objref cv1_450, cv2_450, cv3_450, cv4_450, cv5_450, cv6_450
+cv1_450 = new Vector()
+cable1 cv1_450.record(&v(0.45)) // record v 450 microns from stimulation site 
+cv2_450 = new Vector()
+cable2 cv2_450.record(&v(0.45)) // record v 450 microns from stimulation site
+cv3_450 = new Vector()
+cable3 cv3_450.record(&v(0.45)) // record v 450 microns from stimulation site
+cv4_450 = new Vector()
+cable4 cv4_450.record(&v(0.45)) // record v 450 microns from stimulation site
+cv5_450 = new Vector()
+cable5 cv5_450.record(&v(0.45)) // record v 450 microns from stimulation site
+cv6_450 = new Vector()
+cable6 cv6_450.record(&v(0.45)) // record v 450 microns from stimulation site
+
+// 600 microns from stimulation site
+objref cv1_600, cv2_600, cv3_600, cv4_600, cv5_600, cv6_600
+cv1_600 = new Vector()
+cable1 cv1_600.record(&v(0.3)) // record v 600 microns from stimulation site
+cv2_600 = new Vector()
+cable2 cv2_600.record(&v(0.3)) // record v 600 microns from stimulation site
+cv3_600 = new Vector()
+cable3 cv3_600.record(&v(0.3)) // record v 600 microns from stimulation site
+cv4_600 = new Vector()
+cable4 cv4_600.record(&v(0.3)) // record v 600 microns from stimulation site
+cv5_600 = new Vector()
+cable5 cv5_600.record(&v(0.3)) // record v 600 microns from stimulation site
+cv6_600 = new Vector()
+cable6 cv6_600.record(&v(0.3)) // record v 600 microns from stimulation site
+
+// 750 microns from stimulation site
+objref cv1_750, cv2_750, cv3_750, cv4_750, cv5_750, cv6_750
+cv1_750 = new Vector()
+cable1 cv1_750.record(&v(0.150)) // record v 750 microns from stimulation site
+cv2_750 = new Vector()
+cable2 cv2_750.record(&v(0.150)) // record v 750 microns from stimulation site
+cv3_750 = new Vector()
+cable3 cv3_750.record(&v(0.150)) // record v 750 microns from stimulation site
+cv4_750 = new Vector()
+cable4 cv4_750.record(&v(0.150)) // record v 750 microns from stimulation site
+cv5_750 = new Vector()
+cable5 cv5_750.record(&v(0.150)) // record v 750 microns from stimulation site
+cv6_750 = new Vector()
+cable6 cv6_750.record(&v(0.150)) // record v 750 microns from stimulation site
+
+
+// 900 microns from stimulation site
+objref cv1_850, cv2_850, cv3_850, cv4_850, cv5_850, cv6_850
+cv1_850 = new Vector()
+cable1 cv1_850.record(&v(0.05)) // record v 900 microns from stimulation site 
+cv2_850 = new Vector()
+cable2 cv2_850.record(&v(0.05)) // record v 900 microns from stimulation site
+cv3_850 = new Vector()
+cable3 cv3_850.record(&v(0.05)) // record v 900 microns from stimulation site
+cv4_850 = new Vector()
+cable4 cv4_850.record(&v(0.05)) // record v 900 microns from stimulation site
+cv5_850 = new Vector()
+cable5 cv5_850.record(&v(0.05)) // record v 900 microns from stimulation site
+cv6_850 = new Vector()
+cable6 cv6_850.record(&v(0.05)) // record v 900 microns from stimulation site
+
+
+
+
+// GRAPHICAL DISPLAY//
+
+//Graph 1
+objref g
+g = new Graph()
+g.size(0, 2000, -65, -45)
+g.addvar("cable1.v(0.05)",1,1,0.6,0.9,2)
+g.addvar("cable2.v(0.05)",2,1,0.6,0.9,2)
+g.addvar("cable3.v(0.05)",3,1,0.6,0.9,2)
+g.addvar("cable4.v(0.05)",4,1,0.6,0.9,2)
+g.addvar("cable5.v(0.05)",5,1,0.6,0.9,2)
+g.addvar("cable6.v(0.05)",6,1,0.6,0.9,2)
+
+
+
+// SIMULATION CONTROL electrode 0//
+dt = 0.45//msec
+tstop = 2000 //duration of simulation
+v_init = -50 // V rest
+proc initialize() {
+	finitialize(v_init)
+	fcurrent()
+}
+
+proc integrate() {
+	g.begin()
+	while(t<tstop) {
+		fadvance()
+		g.plot(t)	
+	}
+	g.flush()
+	
+}
+
+proc go() {
+	initialize()
+	integrate()
+}
+
+

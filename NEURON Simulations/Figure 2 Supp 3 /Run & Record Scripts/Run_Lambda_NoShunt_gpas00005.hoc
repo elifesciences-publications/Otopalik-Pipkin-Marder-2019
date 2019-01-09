@@ -1,0 +1,82 @@
+// This script runs the direction sensitivity simulation for 6 cables (with different Ra values)
+// and generates one text file for each of four g_pas values
+// load_file("nrngui.hoc")
+// set correct working directory:
+//chdir("/Users/adrianeotopalik/Desktop/NEURON-7.5/Direction Sensitivity Simulations/Newest Run/Measure Lambda/Mar 21 Cable Library")
+
+/////////////////////////  gpas = 0.0001 ohm*cm^2  //////////////////////////////////
+
+chdir("/Users/adrianeotopalik/Desktop/NEURON-7.5/Direction Sensitivity Simulations/Newest Run/Measure Lambda/Mar 21 Cable Library")
+load_file("noshunt_dropoff_cable_gpas00005_diams10_1.hoc")
+load_file("Measure_Lambda_Shunt_new_v1.hoc")
+go()
+
+// have to give go() command then can run the write-to-file sequence below
+
+objref f1
+f1 = new File()
+f1.wopen("lambda_noshunt_drop04to06_gpas00005_diams10_1_Ra50.txt")
+cv1_0.printf(f1)
+cv1_150.printf(f1)
+cv1_300.printf(f1)
+cv1_450.printf(f1)
+cv1_600.printf(f1)
+cv1_750.printf(f1)
+cv1_850.printf(f1)
+f1.close()
+
+
+objref f2
+f2 = new File()
+f2.wopen("lambda_noshunt_drop04to06_gpas00005_diams10_1_Ra100.txt")
+cv2_0.printf(f2)
+cv2_150.printf(f2)
+cv2_300.printf(f2)
+cv2_450.printf(f2)
+cv2_600.printf(f2)
+cv2_750.printf(f2)
+cv2_850.printf(f2)
+f2.close()
+
+
+objref f3
+f3 = new File()
+f3.wopen("lambda_noshunt_drop04to06_gpas00005_diams10_1_Ra150.txt")
+cv3_0.printf(f3)
+cv3_150.printf(f3)
+cv3_300.printf(f3)
+cv3_450.printf(f3)
+cv3_600.printf(f3)
+cv3_750.printf(f3)
+cv3_850.printf(f3)
+f3.close()
+
+
+objref f4
+f4 = new File()
+f4.wopen("lambda_noshunt_drop04to06_gpas00005_diams10_1_Ra200.txt")
+cv4_0.printf(f4)
+cv4_150.printf(f4)
+cv4_300.printf(f4)
+cv4_450.printf(f4)
+cv4_600.printf(f4)
+cv4_750.printf(f4)
+cv4_850.printf(f4)
+f4.close()
+
+
+objref f5
+f5 = new File()
+f5.wopen("lambda_noshunt_drop04to06_gpas00005_diams10_1_Ra300.txt")
+cv5_0.printf(f5)
+cv5_150.printf(f5)
+cv5_300.printf(f5)
+cv5_450.printf(f5)
+cv5_600.printf(f5)
+cv5_750.printf(f5)
+cv5_850.printf(f5)
+f5.close()
+
+
+quit()
+

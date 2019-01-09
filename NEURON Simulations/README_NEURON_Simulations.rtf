@@ -1,0 +1,21 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \
+NEURON Simulations Folder READ-ME\
+\
+Here you will find one folder for each of the simulations presented in Figures 1, 2, and 4 of Otopalik, Pipken, & Marder (201_).\
+\
+In each folder you will find:\
+\
+1) A Cable Library: these contain files in the .hoc format (NEURON, Hines & Carnevale, 2001) that can be called upon in the NEURON simulation environment. Each file defines a set of cables with a given geometry (the proximal and distal diameters are defined in the file name, in that order) and set of passive properties. These scripts can be read in Sublime Text or other text editor.\
+\
+2) Record & Run Scripts: these .hoc files are necessary for simulating evoked inhibitory events (\'91Measure\'92 or \'91Record\'92 scripts) and writing the simulation output (voltage time series) for a defined cables (in the cable library) to .txt files (\'91Run\'92 script). These scripts can be read or edited in a text editor, but are called upon and executed in the NEURON simulation environment.\
+\
+3) Output: this folder contains the voltage time series for the simulation described in the parent folder for individual or sets of cables with the diameters and passive properties defined in the output .txt file name (e.g. DSOutput_gpas0002_diams05_05.txt contains voltage time series for directional sensitivity simulations for all cables with passive conductances of 0.0002 S, proximal diameters of 0.5 microns, and distal diameters of 0.5 microns). \
+\
+4) MATLAB Analysis: this folder contains a workspace and script for uploading, organizing, analyzing, and plotting the simulation output. The output data should already be uploaded into the MATLAB workspace and organized, so it is unnecessary to re-upload the voltage time series again. However, if desired, one must define the current directory and \'93mydir\'94 such that the simulation output is properly recognized in MATLAB. It is inadvisable to simply \'93Run\'94 this script. Instead, the desired sections of the script should be run individually.}

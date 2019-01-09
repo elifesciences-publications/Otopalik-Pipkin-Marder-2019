@@ -1,0 +1,614 @@
+// INSTRUMENTATION : IClamp at cable.loc(0) and photo-uncaging mimic at different positions//
+
+//glutamate responses are mimicked with an inhibitory current with Erev (e) = -70 mV 
+//across positions spaced 100 microns apart on the cable. varying in distance:
+// 400, 500, 600, 700, 800 microns from the recording site (0 microns). 
+
+
+// CABLE 1: 
+// 100 um is the "recording" site
+
+// CENTRIPETAL, individual responses:
+// define positions and evoked responses:
+objref pos1_1, pos1_2, pos1_3, pos1_4, pos1_5
+cable1 pos1_1 = new AlphaSynapse(0.9) // mimick evoked glutamate responses with alpha syn.
+cable1 pos1_2 = new AlphaSynapse(.8)
+cable1 pos1_3 = new AlphaSynapse(0.7)
+cable1 pos1_4 = new AlphaSynapse(0.6)
+cable1 pos1_5 = new AlphaSynapse(0.5)
+pos1_1.onset = 1000 // stimulation time for each site (at 5 Hz, so ISI = 200 ms)
+pos1_2.onset = 2000
+pos1_3.onset = 3000
+pos1_4.onset = 4000
+pos1_5.onset = 5000
+pos1_1.gmax = 0.01 // maximal conductances (set equal at first in uS)
+pos1_2.gmax = 0.01
+pos1_3.gmax = 0.01
+pos1_4.gmax = 0.01
+pos1_5.gmax = 0.01
+pos1_1.tau = 70 // time constant, set to 3 ms at first
+pos1_2.tau = 70
+pos1_3.tau = 70
+pos1_4.tau = 70
+pos1_5.tau = 70
+pos1_1.e = -75 // Erev for each position, set all to -70 mV
+pos1_2.e = -75 
+pos1_3.e = -75 
+pos1_4.e = -75 
+pos1_5.e = -75 
+
+// CENTRIPETAL
+// define positions and evoked reponses:
+objref pos1_6, pos1_7, pos1_8, pos1_9, pos1_10
+cable1 pos1_6 = new AlphaSynapse(0.9) // mimick evoked glutamate responses with alpha syn.
+cable1 pos1_7 = new AlphaSynapse(.8)
+cable1 pos1_8 = new AlphaSynapse(0.7)
+cable1 pos1_9 = new AlphaSynapse(0.6)
+cable1 pos1_10 = new AlphaSynapse(0.5)
+pos1_6.onset = 7000 // stimulation time for each site (at 5 Hz, so ISI = 200 ms)
+pos1_7.onset = 7200
+pos1_8.onset = 7400
+pos1_9.onset = 7600
+pos1_10.onset = 7800
+pos1_6.gmax = 0.01 // maximal conductances (set equal at first in uS)
+pos1_7.gmax = 0.01
+pos1_8.gmax = 0.01
+pos1_9.gmax = 0.01
+pos1_10.gmax = 0.01
+pos1_6.tau = 70 // time constant, set to 3 ms at first
+pos1_7.tau = 70
+pos1_8.tau = 70
+pos1_9.tau = 70
+pos1_10.tau = 70
+pos1_6.e = -75 // Erev for each position, set all to -70 mV
+pos1_7.e = -75 
+pos1_8.e = -75 
+pos1_9.e = -75 
+pos1_10.e = -75 
+
+// CENTRIFUGAL
+objref pos1_11, pos1_12, pos1_13, pos1_14, pos1_15 // NOTE: positions 1-5 are equivalent to positions 6-10
+cable1 pos1_11 = new AlphaSynapse(0.9) // mimick evoked glutamate responses with alpha syn.
+cable1 pos1_12 = new AlphaSynapse(.8)
+cable1 pos1_13 = new AlphaSynapse(0.7)
+cable1 pos1_14 = new AlphaSynapse(0.6)
+cable1 pos1_15 = new AlphaSynapse(0.5)
+pos1_11.onset = 10800 // stimulation time for each site (at 5 Hz, so ISI = 200 ms)
+pos1_12.onset = 10600
+pos1_13.onset = 10400
+pos1_14.onset = 10200
+pos1_15.onset = 10000
+pos1_11.gmax = 0.01 // maximal conductances (set equal at first in uS)
+pos1_12.gmax = 0.01
+pos1_13.gmax = 0.01
+pos1_14.gmax = 0.01
+pos1_15.gmax = 0.01
+pos1_11.tau = 70 // time constant, set to 3 ms at first
+pos1_12.tau = 70
+pos1_13.tau = 70
+pos1_14.tau = 70
+pos1_15.tau = 70
+pos1_11.e = -75 // Erev for each position, set all to -70 mV
+pos1_12.e = -75 
+pos1_13.e = -75 
+pos1_14.e = -75 
+pos1_15.e = -75 
+
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////
+
+// CABLE 2: Ra = 10 ohm*cm
+
+objref pos2_1, pos2_2, pos2_3, pos2_4, pos2_5
+cable2 pos2_1 = new AlphaSynapse(0.9) // mimick evoked glutamate responses with alpha syn.
+cable2 pos2_2 = new AlphaSynapse(.8)
+cable2 pos2_3 = new AlphaSynapse(0.7)
+cable2 pos2_4 = new AlphaSynapse(0.6)
+cable2 pos2_5 = new AlphaSynapse(0.5)
+pos2_1.onset = 1000 // stimulation time for each site (at 5 Hz, so ISI = 200 ms)
+pos2_2.onset = 2000
+pos2_3.onset = 3000
+pos2_4.onset = 4000
+pos2_5.onset = 5000
+pos2_1.gmax = 0.01 // maximal conductances (set equal at first in uS)
+pos2_2.gmax = 0.01
+pos2_3.gmax = 0.01
+pos2_4.gmax = 0.01
+pos2_5.gmax = 0.01
+pos2_1.tau = 70 // time constant, set to 3 ms at first
+pos2_2.tau = 70
+pos2_3.tau = 70
+pos2_4.tau = 70
+pos2_5.tau = 70
+pos2_1.e = -75 // Erev for each position, set all to -70 mV
+pos2_2.e = -75 
+pos2_3.e = -75 
+pos2_4.e = -75 
+pos2_5.e = -75 
+
+// CENTRIPETAL
+// define positions and evoked reponses:
+objref pos2_6, pos2_7, pos2_8, pos2_9, pos2_10
+cable2 pos2_6 = new AlphaSynapse(0.9) // mimick evoked glutamate responses with alpha syn.
+cable2 pos2_7 = new AlphaSynapse(.8)
+cable2 pos2_8 = new AlphaSynapse(0.7)
+cable2 pos2_9 = new AlphaSynapse(0.6)
+cable2 pos2_10 = new AlphaSynapse(0.5)
+pos2_6.onset = 7000 // stimulation time for each site (at 5 Hz, so ISI = 200 ms)
+pos2_7.onset = 7200
+pos2_8.onset = 7400
+pos2_9.onset = 7600
+pos2_10.onset = 7800
+pos2_6.gmax = 0.01 // maximal conductances (set equal at first in uS)
+pos2_7.gmax = 0.01
+pos2_8.gmax = 0.01
+pos2_9.gmax = 0.01
+pos2_10.gmax = 0.01
+pos2_6.tau = 70 // time constant, set to 3 ms at first
+pos2_7.tau = 70
+pos2_8.tau = 70
+pos2_9.tau = 70
+pos2_10.tau = 70
+pos2_6.e = -75 // Erev for each position, set all to -70 mV
+pos2_7.e = -75 
+pos2_8.e = -75 
+pos2_9.e = -75 
+pos2_10.e = -75 
+
+// CENTRIFUGAL
+objref pos2_11, pos2_12, pos2_13, pos2_14, pos2_15 
+cable2 pos2_11 = new AlphaSynapse(0.9) // mimick evoked glutamate responses with alpha syn.
+cable2 pos2_12 = new AlphaSynapse(.8)
+cable2 pos2_13 = new AlphaSynapse(0.7)
+cable2 pos2_14 = new AlphaSynapse(0.6)
+cable2 pos2_15 = new AlphaSynapse(0.5)
+pos2_11.onset = 10800 // stimulation time for each site (at 5 Hz, so ISI = 200 ms)
+pos2_12.onset = 10600
+pos2_13.onset = 10400
+pos2_14.onset = 10200
+pos2_15.onset = 10000
+pos2_11.gmax = 0.01 // maximal conductances (set equal at first in uS)
+pos2_12.gmax = 0.01
+pos2_13.gmax = 0.01
+pos2_14.gmax = 0.01
+pos2_15.gmax = 0.01
+pos2_11.tau = 70 // time constant, set to 3 ms at first
+pos2_12.tau = 70
+pos2_13.tau = 70
+pos2_14.tau = 70
+pos2_15.tau = 70
+pos2_11.e = -75 // Erev for each position, set all to -70 mV
+pos2_12.e = -75 
+pos2_13.e = -75 
+pos2_14.e = -75 
+pos2_15.e = -75 
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////
+
+// CABLE 3: Ra = 50 ohm*cm
+
+objref pos3_1, pos3_2, pos3_3, pos3_4, pos3_5
+cable3 pos3_1 = new AlphaSynapse(0.9) // mimick evoked glutamate responses with alpha syn.
+cable3 pos3_2 = new AlphaSynapse(.8)
+cable3 pos3_3 = new AlphaSynapse(0.7)
+cable3 pos3_4 = new AlphaSynapse(0.6)
+cable3 pos3_5 = new AlphaSynapse(0.5)
+pos3_1.onset = 1000 // stimulation time for each site (at 5 Hz, so ISI = 200 ms)
+pos3_2.onset = 2000
+pos3_3.onset = 3000
+pos3_4.onset = 4000
+pos3_5.onset = 5000
+pos3_1.gmax = 0.01 // maximal conductances (set equal at first in uS)
+pos3_2.gmax = 0.01
+pos3_3.gmax = 0.01
+pos3_4.gmax = 0.01
+pos3_5.gmax = 0.01
+pos3_1.tau = 70 // time constant, set to 3 ms at first
+pos3_2.tau = 70
+pos3_3.tau = 70
+pos3_4.tau = 70
+pos3_5.tau = 70
+pos3_1.e = -75 // Erev for each position, set all to -70 mV
+pos3_2.e = -75 
+pos3_3.e = -75 
+pos3_4.e = -75 
+pos3_5.e = -75 
+
+// CENTRIPETAL
+// define positions and evoked reponses:
+objref pos3_6, pos3_7, pos3_8, pos3_9, pos3_10
+cable3 pos3_6 = new AlphaSynapse(0.9) // mimick evoked glutamate responses with alpha syn.
+cable3 pos3_7 = new AlphaSynapse(.8)
+cable3 pos3_8 = new AlphaSynapse(0.7)
+cable3 pos3_9 = new AlphaSynapse(0.6)
+cable3 pos3_10 = new AlphaSynapse(0.5)
+pos3_6.onset = 7000 // stimulation time for each site (at 5 Hz, so ISI = 200 ms)
+pos3_7.onset = 7200
+pos3_8.onset = 7400
+pos3_9.onset = 7600
+pos3_10.onset = 7800
+pos3_6.gmax = 0.01 // maximal conductances (set equal at first in uS)
+pos3_7.gmax = 0.01
+pos3_8.gmax = 0.01
+pos3_9.gmax = 0.01
+pos3_10.gmax = 0.01
+pos3_6.tau = 70 // time constant, set to 3 ms at first
+pos3_7.tau = 70
+pos3_8.tau = 70
+pos3_9.tau = 70
+pos3_10.tau = 70
+pos3_6.e = -75 // Erev for each position, set all to -70 mV
+pos3_7.e = -75 
+pos3_8.e = -75 
+pos3_9.e = -75 
+pos3_10.e = -75 
+
+// CENTRIFUGAL
+objref pos3_11, pos3_12, pos3_13, pos3_14, pos3_15 
+cable3 pos3_11 = new AlphaSynapse(0.9) // mimick evoked glutamate responses with alpha syn.
+cable3 pos3_12 = new AlphaSynapse(.8)
+cable3 pos3_13 = new AlphaSynapse(0.7)
+cable3 pos3_14 = new AlphaSynapse(0.6)
+cable3 pos3_15 = new AlphaSynapse(0.5)
+pos3_11.onset = 10800 // stimulation time for each site (at 5 Hz, so ISI = 200 ms)
+pos3_12.onset = 10600
+pos3_13.onset = 10400
+pos3_14.onset = 10200
+pos3_15.onset = 10000
+pos3_11.gmax = 0.01 // maximal conductances (set equal at first in uS)
+pos3_12.gmax = 0.01
+pos3_13.gmax = 0.01
+pos3_14.gmax = 0.01
+pos3_15.gmax = 0.01
+pos3_11.tau = 70 // time constant, set to 3 ms at first
+pos3_12.tau = 70
+pos3_13.tau = 70
+pos3_14.tau = 70
+pos3_15.tau = 70
+pos3_11.e = -75 // Erev for each position, set all to -70 mV
+pos3_12.e = -75 
+pos3_13.e = -75 
+pos3_14.e = -75 
+pos3_15.e = -75 
+
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////
+
+// CABLE 4: Ra = 100 ohm*cm
+objref pos4_1, pos4_2, pos4_3, pos4_4, pos4_5
+cable4 pos4_1 = new AlphaSynapse(0.9) // mimick evoked glutamate responses with alpha syn.
+cable4 pos4_2 = new AlphaSynapse(.8)
+cable4 pos4_3 = new AlphaSynapse(0.7)
+cable4 pos4_4 = new AlphaSynapse(0.6)
+cable4 pos4_5 = new AlphaSynapse(0.5)
+pos4_1.onset = 1000 // stimulation time for each site (at 5 Hz, so ISI = 200 ms)
+pos4_2.onset = 2000
+pos4_3.onset = 3000
+pos4_4.onset = 4000
+pos4_5.onset = 5000
+pos4_1.gmax = 0.01 // maximal conductances (set equal at first in uS)
+pos4_2.gmax = 0.01
+pos4_3.gmax = 0.01
+pos4_4.gmax = 0.01
+pos4_5.gmax = 0.01
+pos4_1.tau = 70 // time constant, set to 3 ms at first
+pos4_2.tau = 70
+pos4_3.tau = 70
+pos4_4.tau = 70
+pos4_5.tau = 70
+pos4_1.e = -75 // Erev for each position, set all to -70 mV
+pos4_2.e = -75 
+pos4_3.e = -75 
+pos4_4.e = -75 
+pos4_5.e = -75 
+
+// CENTRIPETAL
+// define positions and evoked reponses:
+objref pos4_6, pos4_7, pos4_8, pos4_9, pos4_10
+cable4 pos4_6 = new AlphaSynapse(0.9) // mimick evoked glutamate responses with alpha syn.
+cable4 pos4_7 = new AlphaSynapse(.8)
+cable4 pos4_8 = new AlphaSynapse(0.7)
+cable4 pos4_9 = new AlphaSynapse(0.6)
+cable4 pos4_10 = new AlphaSynapse(0.5)
+pos4_6.onset = 7000 // stimulation time for each site (at 5 Hz, so ISI = 200 ms)
+pos4_7.onset = 7200
+pos4_8.onset = 7400
+pos4_9.onset = 7600
+pos4_10.onset = 7800
+pos4_6.gmax = 0.01 // maximal conductances (set equal at first in uS)
+pos4_7.gmax = 0.01
+pos4_8.gmax = 0.01
+pos4_9.gmax = 0.01
+pos4_10.gmax = 0.01
+pos4_6.tau = 70 // time constant, set to 3 ms at first
+pos4_7.tau = 70
+pos4_8.tau = 70
+pos4_9.tau = 70
+pos4_10.tau = 70
+pos4_6.e = -75 // Erev for each position, set all to -70 mV
+pos4_7.e = -75 
+pos4_8.e = -75 
+pos4_9.e = -75 
+pos4_10.e = -75 
+
+// CENTRIFUGAL
+objref pos4_11, pos4_12, pos4_13, pos4_14, pos4_15 // NOTE: positions 1-5 are equivalent to positions 6-10
+cable4 pos4_11 = new AlphaSynapse(0.9) // mimick evoked glutamate responses with alpha syn.
+cable4 pos4_12 = new AlphaSynapse(.8)
+cable4 pos4_13 = new AlphaSynapse(0.7)
+cable4 pos4_14 = new AlphaSynapse(0.6)
+cable4 pos4_15 = new AlphaSynapse(0.5)
+pos4_11.onset = 10800 // stimulation time for each site (at 5 Hz, so ISI = 200 ms)
+pos4_12.onset = 10600
+pos4_13.onset = 10400
+pos4_14.onset = 10200
+pos4_15.onset = 10000
+pos4_11.gmax = 0.01 // maximal conductances (set equal at first in uS)
+pos4_12.gmax = 0.01
+pos4_13.gmax = 0.01
+pos4_14.gmax = 0.01
+pos4_15.gmax = 0.01
+pos4_11.tau = 70 // time constant, set to 3 ms at first
+pos4_12.tau = 70
+pos4_13.tau = 70
+pos4_14.tau = 70
+pos4_15.tau = 70
+pos4_11.e = -75 // Erev for each position, set all to -70 mV
+pos4_12.e = -75 
+pos4_13.e = -75 
+pos4_14.e = -75 
+pos4_15.e = -75 
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////
+
+// CABLE 5: Ra = 150 ohm*cm
+objref pos5_1, pos5_2, pos5_3, pos5_4, pos5_5
+cable5 pos5_1 = new AlphaSynapse(0.9) // mimick evoked glutamate responses with alpha syn.
+cable5 pos5_2 = new AlphaSynapse(.8)
+cable5 pos5_3 = new AlphaSynapse(0.7)
+cable5 pos5_4 = new AlphaSynapse(0.6)
+cable5 pos5_5 = new AlphaSynapse(0.5)
+pos5_1.onset = 1000 // stimulation time for each site (at 5 Hz, so ISI = 200 ms)
+pos5_2.onset = 2000
+pos5_3.onset = 3000
+pos5_4.onset = 4000
+pos5_5.onset = 5000
+pos5_1.gmax = 0.01 // maximal conductances (set equal at first in uS)
+pos5_2.gmax = 0.01
+pos5_3.gmax = 0.01
+pos5_4.gmax = 0.01
+pos5_5.gmax = 0.01
+pos5_1.tau = 70 // time constant, set to 3 ms at first
+pos5_2.tau = 70
+pos5_3.tau = 70
+pos5_4.tau = 70
+pos5_5.tau = 70
+pos5_1.e = -75 // Erev for each position, set all to -70 mV
+pos5_2.e = -75 
+pos5_3.e = -75 
+pos5_4.e = -75 
+pos5_5.e = -75 
+
+// CENTRIPETAL
+// define positions and evoked reponses:
+objref pos5_6, pos5_7, pos5_8, pos5_9, pos5_10
+cable5 pos5_6 = new AlphaSynapse(0.9) // mimick evoked glutamate responses with alpha syn.
+cable5 pos5_7 = new AlphaSynapse(.8)
+cable5 pos5_8 = new AlphaSynapse(0.7)
+cable5 pos5_9 = new AlphaSynapse(0.6)
+cable5 pos5_10 = new AlphaSynapse(0.5)
+pos5_6.onset = 7000 // stimulation time for each site (at 5 Hz, so ISI = 200 ms)
+pos5_7.onset = 7200
+pos5_8.onset = 7400
+pos5_9.onset = 7600
+pos5_10.onset = 7800
+pos5_6.gmax = 0.01 // maximal conductances (set equal at first in uS)
+pos5_7.gmax = 0.01
+pos5_8.gmax = 0.01
+pos5_9.gmax = 0.01
+pos5_10.gmax = 0.01
+pos5_6.tau = 70 // time constant, set to 3 ms at first
+pos5_7.tau = 70
+pos5_8.tau = 70
+pos5_9.tau = 70
+pos5_10.tau = 70
+pos5_6.e = -75 // Erev for each position, set all to -70 mV
+pos5_7.e = -75 
+pos5_8.e = -75 
+pos5_9.e = -75 
+pos5_10.e = -75 
+
+// CENTRIFUGAL
+objref pos5_11, pos5_12, pos5_13, pos5_14, pos5_15 // NOTE: positions 1-5 are equivalent to positions 6-10
+cable5 pos5_11 = new AlphaSynapse(0.9) // mimick evoked glutamate responses with alpha syn.
+cable5 pos5_12 = new AlphaSynapse(.8)
+cable5 pos5_13 = new AlphaSynapse(0.7)
+cable5 pos5_14 = new AlphaSynapse(0.6)
+cable5 pos5_15 = new AlphaSynapse(0.5)
+pos5_11.onset = 10800 // stimulation time for each site (at 5 Hz, so ISI = 200 ms)
+pos5_12.onset = 10600
+pos5_13.onset = 10400
+pos5_14.onset = 10200
+pos5_15.onset = 10000
+pos5_11.gmax = 0.01 // maximal conductances (set equal at first in uS)
+pos5_12.gmax = 0.01
+pos5_13.gmax = 0.01
+pos5_14.gmax = 0.01
+pos5_15.gmax = 0.01
+pos5_11.tau = 70 // time constant, set to 3 ms at first
+pos5_12.tau = 70
+pos5_13.tau = 70
+pos5_14.tau = 70
+pos5_15.tau = 70
+pos5_11.e = -75 // Erev for each position, set all to -70 mV
+pos5_12.e = -75 
+pos5_13.e = -75 
+pos5_14.e = -75 
+pos5_15.e = -75 
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////
+
+// CABLE 6: Ra = 200 ohm*cm
+
+objref pos6_1, pos6_2, pos6_3, pos6_4, pos6_5
+cable6 pos6_1 = new AlphaSynapse(0.9) // mimick evoked glutamate responses with alpha syn.
+cable6 pos6_2 = new AlphaSynapse(.8)
+cable6 pos6_3 = new AlphaSynapse(0.7)
+cable6 pos6_4 = new AlphaSynapse(0.6)
+cable6 pos6_5 = new AlphaSynapse(0.5)
+pos6_1.onset = 1000 // stimulation time for each site (at 5 Hz, so ISI = 200 ms)
+pos6_2.onset = 2000
+pos6_3.onset = 3000
+pos6_4.onset = 4000
+pos6_5.onset = 5000
+pos6_1.gmax = 0.01 // maximal conductances (set equal at first in uS)
+pos6_2.gmax = 0.01
+pos6_3.gmax = 0.01
+pos6_4.gmax = 0.01
+pos6_5.gmax = 0.01
+pos6_1.tau = 70 // time constant, set to 3 ms at first
+pos6_2.tau = 70
+pos6_3.tau = 70
+pos6_4.tau = 70
+pos6_5.tau = 70
+pos6_1.e = -75 // Erev for each position, set all to -70 mV
+pos6_2.e = -75 
+pos6_3.e = -75 
+pos6_4.e = -75 
+pos6_5.e = -75 
+
+// CENTRIPETAL
+// define positions and evoked reponses:
+objref pos6_6, pos6_7, pos6_8, pos6_9, pos6_10
+cable6 pos6_6 = new AlphaSynapse(0.9) // mimick evoked glutamate responses with alpha syn.
+cable6 pos6_7 = new AlphaSynapse(.8)
+cable6 pos6_8 = new AlphaSynapse(0.7)
+cable6 pos6_9 = new AlphaSynapse(0.6)
+cable6 pos6_10 = new AlphaSynapse(0.5)
+pos6_6.onset = 7000 // stimulation time for each site (at 5 Hz, so ISI = 200 ms)
+pos6_7.onset = 7200
+pos6_8.onset = 7400
+pos6_9.onset = 7600
+pos6_10.onset = 7800
+pos6_6.gmax = 0.01 // maximal conductances (set equal at first in uS)
+pos6_7.gmax = 0.01
+pos6_8.gmax = 0.01
+pos6_9.gmax = 0.01
+pos6_10.gmax = 0.01
+pos6_6.tau = 70 // time constant, set to 3 ms at first
+pos6_7.tau = 70
+pos6_8.tau = 70
+pos6_9.tau = 70
+pos6_10.tau = 70
+pos6_6.e = -75 // Erev for each position, set all to -70 mV
+pos6_7.e = -75 
+pos6_8.e = -75 
+pos6_9.e = -75 
+pos6_10.e = -75 
+
+// CENTRIFUGAL
+objref pos6_11, pos6_12, pos6_13, pos6_14, pos6_15 // NOTE: positions 1-5 are equivalent to positions 6-10
+cable6 pos6_11 = new AlphaSynapse(0.9) // mimick evoked glutamate responses with alpha syn.
+cable6 pos6_12 = new AlphaSynapse(.8)
+cable6 pos6_13 = new AlphaSynapse(0.7)
+cable6 pos6_14 = new AlphaSynapse(0.6)
+cable6 pos6_15 = new AlphaSynapse(0.5)
+pos6_11.onset = 10800 // stimulation time for each site (at 5 Hz, so ISI = 200 ms)
+pos6_12.onset = 10600
+pos6_13.onset = 10400
+pos6_14.onset = 10200
+pos6_15.onset = 10000
+pos6_11.gmax = 0.01 // maximal conductances (set equal at first in uS)
+pos6_12.gmax = 0.01
+pos6_13.gmax = 0.01
+pos6_14.gmax = 0.01
+pos6_15.gmax = 0.01
+pos6_11.tau = 70 // time constant, set to 3 ms at first
+pos6_12.tau = 70
+pos6_13.tau = 70
+pos6_14.tau = 70
+pos6_15.tau = 70
+pos6_11.e = -75 // Erev for each position, set all to -70 mV
+pos6_12.e = -75 
+pos6_13.e = -75 
+pos6_14.e = -75 
+pos6_15.e = -75 
+
+
+//////////////////////////////////////////////////////
+
+// Vectors //
+
+objref cv1, cv2, cv3, cv4, cv5, cv6
+cv1 = new Vector()
+cable1 cv1.record(&v(0.05)) // record v at x = 200 microns 
+cv2 = new Vector()
+cable2 cv2.record(&v(0.05)) // record v at x = 200 microns 
+cv3 = new Vector()
+cable3 cv3.record(&v(0.05)) // record v at x = 200 microns
+cv4 = new Vector()
+cable4 cv4.record(&v(0.05)) // record v at x = 200 microns
+cv5 = new Vector()
+cable5 cv5.record(&v(0.05)) // record v at x = 200 microns
+cv6 = new Vector()
+cable6 cv6.record(&v(0.05)) // record v at x = 200 microns
+
+
+// graphical display //
+objref g
+g = new Graph()
+g.size(0, 12000, -60, -45)
+g.addvar("cable1.v(0.05)",1,1,0.6,0.9,2)
+g.addvar("cable2.v(0.05)",2,1,0.6,0.9,2)
+g.addvar("cable3.v(0.05)",3,1,0.6,0.9,2)
+g.addvar("cable4.v(0.05)",4,1,0.6,0.9,2)
+g.addvar("cable5.v(0.05)",5,1,0.6,0.9,2)
+g.addvar("cable6.v(0.05)",6,1,0.6,0.9,2)
+
+
+
+
+// SIMULATION CONTROL //
+dt = 0.1// msec
+tstop = 12000 //duration of simulation
+v_init = -50 // V rest
+proc initialize() {
+	finitialize(v_init)
+	fcurrent()
+}
+
+proc integrate() {
+	g.begin()
+	while(t<tstop) {
+		fadvance()
+		g.plot(t)
+	}
+	g.flush()
+}
+
+proc go() {
+	initialize()
+	integrate()
+}
+
+
+////////////////////////////////////////////////
+
+
+
+// to run simulation, type the go() into the command window! Type quit() to exit NEURON and close windows
